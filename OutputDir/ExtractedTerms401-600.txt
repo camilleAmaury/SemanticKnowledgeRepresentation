@@ -1,0 +1,205 @@
+reliability
+people
+background
+feature extraction
+diagnosis
+objective
+objectives
+data mining
+micrornas
+(mirnas
+gene expression
+mirnas
+energy efficiency
+present study
+cell
+adoption
+treatment
+mechanism
+change
+classes
+infrastructure
+visualization
+construction
+execution time
+rise
+task
+disease
+end
+proliferation
+utilization
+sequence
+online social networks
+selection
+reduction
+cost
+computers
+automation
+limitations
+progression
+point
+great importance
+years
+differences
+behaviors
+modelling
+benefits
+lot
+big data
+data analysis
+business
+modeling
+aspects
+availability
+transformation
+extension
+schemes
+investigation
+mathematics
+rights
+darboux transformation
+variability
+education
+critical role
+gap
+shape
+way
+important task
+degree
+cells
+last decade
+opportunities
+challenges
+effect
+numerous applications
+ga
+difficulties
+cloud
+demand
+virtualization
+network traffic
+capability
+organization
+space
+workflows
+operation
+type
+social networks
+platforms
+edges
+contribution
+developers
+information security
+elliptic curve cryptography
+survey
+abstraction
+previous work
+mapreduce
+fact
+advent
+courses
+learning process
+universities
+issues
+programs
+challenge
+games
+engineering
+teaching
+skills
+increase
+strategy
+existing methods
+contents
+important issue
+overview
+modern operating systems
+requirements
+evolution
+defects
+optimization problem
+software product lines
+products
+companies
+verification
+key
+energy consumption
+patterns
+intrusion detection
+data storage
+relations
+operations
+sql
+sequences
+genetic algorithm
+children
+recent advances
+agents
+scene
+vehicles
+graphics processing unit
+gpu
+regions
+thousands
+network attacks
+propagation
+principles
+tracking
+measurement
+ecc
+relational database
+interface
+experience
+functionality
+feature
+cases
+consideration
+purposes
+correctness
+formation
+players
+student
+graphics processing units
+important roles
+hadoop
+extraction
+stability
+activity
+management
+deployment
+question
+main purpose
+integration
+possibilities
+safety
+proposal
+traditional methods
+parallel
+previous works
+parallel computing
+software development process
+past decade
+machine learning techniques
+billions
+videos
+level
+recent studies
+intrusion detection system
+ids
+machine learning algorithms
+protocol
+attack
+collection
+maple
+equations
+instances
+ways
+wireless networks
+novel method
+virtual reality
+events
+semantics
+sets
+power systems
+sip
+cpu

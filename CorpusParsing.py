@@ -1,8 +1,8 @@
 import spacy
 from os import listdir
 from os.path import isfile, join
+from tqdm import tqdm
 nlp = spacy.load('en_core_web_sm')
-
 
 
 def main():
@@ -14,7 +14,7 @@ def main():
     output_dir = r".\OutputDir" # result file output directory
     output_file = output_dir + r"\processedTestCorpus.txt" # name of the output file (the processed corpus)
     freqTerms_output_file = output_dir + r"\freqTerms.txt" # name of the output file (the frequent terms)
-    min_freq = 3 #minimum frequent threshold for creating the file of frequent terms
+    min_freq = 5 #minimum frequent threshold for creating the file of frequent terms
     isDep = True #True for depenceny parsing; False for shallow parsing
     #Process Result: create the processed corpus file and the frequent terms file
 
@@ -23,8 +23,10 @@ def main():
     f2 = open(output_file, "w", errors='ignore')
     for doc in alldocs:
         f2.write("<text>" + "\n") # new document
-        with open(doc, "rb")as docText:
-            for line in docText:
+        with open(doc, "rb") as docText:
+            lines = docText.readlines()
+            for i in tqdm(range(len(lines))):
+                line = lines[i]
                 f2.write("<s>" + "\n") #new sentence
                 sent = line.strip().decode("utf-8", "ignore")
                 if isDep:
@@ -50,12 +52,16 @@ def main():
         f2.write("</text>" + "\n")
 
     #write the frequent lemmas into frequnet file
+    word_writed = 0
     freq_file = open(freqTerms_output_file, "w")
     for key in lemmas.keys():
         if lemmas[key] >= min_freq:
+            word_writed += 1
             freq_file.write(key + "\n")
     freq_file.close()
     f2.close()
+    
+    print("\n > Line writed : {}".format(word_writed))
 
 if __name__ == '__main__':
     main()

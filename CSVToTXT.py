@@ -30,7 +30,7 @@ def main():
         # text processing
         subcorpus = subcorpus.replace('"', "")
         # splitting lines
-        lines = subcorpus.split(".")
+        lines = subcorpus.split("\n")
         for line in lines:
             if line != "" and line != " " and len(line) > 10:
                 line_writed += 1

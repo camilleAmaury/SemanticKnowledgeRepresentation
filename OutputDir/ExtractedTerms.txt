@@ -1,0 +1,605 @@
+order
+study
+effects
+addition
+popularity
+large amounts
+data
+combination
+year
+creation
+rapid development
+computer technology
+computer graphics
+paper
+important problem
+computer vision
+number
+applications
+field
+wide range
+method
+fields
+growth
+humans
+evaluation
+literature
+period
+design
+high performance
+advantages
+relationship
+set
+line
+algorithms
+systems
+security
+system
+scheme
+image processing
+complexity
+decisions
+discovery
+use
+algorithm design
+algorithm
+impact
+relation
+elements
+data structures
+quality
+machine learning
+relational databases
+i.e
+organizations
+software
+malicious activities
+internet
+sensors
+goal
+database
+computer
+program
+queries
+information
+values
+object
+means
+article
+framework
+series
+efficiency
+(c
+distributed denial
+time
+network security
+family
+class
+conjunction
+implementation
+interactions
+kind
+letter
+lax pair
+studies
+improvement
+interaction
+context
+performance
+real time
+effectiveness
+accuracy
+estimation
+noise
+procedure
+parameters
+uncertainty
+storage
+work
+flow
+same time
+classification
+present work
+symbolic computation
+research
+large number
+distribution
+development
+state
+knowledge
+diseases
+review
+content
+majority
+user
+importance
+application
+purpose
+computation
+methodology
+artificial neural networks
+power
+input
+web
+science
+tool
+functions
+technique
+issue
+model
+dimensions
+simulation
+account
+uncertainties
+models
+errors
+characterization
+computer science
+size
+emergence
+conditions
+optimization
+training
+results
+new approach
+structure
+steps
+last few years
+approach
+devices
+new method
+proposed method
+advantage
+help
+identification
+detection
+surface
+solution
+dynamics
+notion
+distributed computing
+users
+contrast
+methods
+analysis
+access
+ontologies
+flexibility
+process
+focus
+reuse
+respect
+components
+groups
+organisms
+materials
+resolution
+domains
+approximation
+nature
+resources
+activities
+mobile device
+students
+production
+case
+tasks
+validation
+hardware
+potential
+software engineering
+behavior
+range
+concept
+problem
+variety
+computer vision applications
+presence
+experiments
+motion
+images
+volume
+particles
+example
+possibility
+source
+project
+bioinformatics
+genes
+proteins
+response
+interest
+the-art
+smart grid
+techniques
+software systems
+domain
+changes
+types
+network
+nodes
+communication
+features
+operating systems
+terms
+characteristics
+wide variety
+wireless sensor network
+wsn
+environments
+role
+things
+iot
+subset
+device
+crucial role
+cloud computing
+past few years
+day
+control
+service
+understanding
+view
+scientists
+prediction
+challenging problem
+structures
+practical applications
+wireless sensor networks
+concepts
+large amount
+constraints
+image
+learning
+rapid growth
+computer programming
+learners
+teachers
+existence
+support
+advancement
+information technology
+information systems
+databases
+advances
+technology
+attention
+ability
+encryption
+area
+boolean functions
+cryptography
+parts
+recent years
+decades
+individuals
+place
+environment
+practice
+aim
+total
+function
+main objective
+problems
+risk
+bacteria
+new algorithm
+course
+university
+generation
+basis
+difficulty
+properties
+large datasets
+objects
+memory
+processors
+lack
+progress
+cancer
+patients
+determination
+introduction
+wsns
+semantic web
+nosql databases
+influence
+factors
+success
+population
+recognition
+networks
+code
+theory
+comparison
+architecture
+smartphones
+exact solutions
+description
+areas
+real-time
+vehicle
+processing
+peer
+vital role
+form
+integral part
+robustness
+attacks
+a way
+visual cryptography
+speed
+assessment
+kinds
+group
+technologies
+game
+representation
+tools
+variables
+increasing number
+productivity
+computations
+need
+different types
+solutions
+recent times
+alternative
+tsp
+variants
+approaches
+processes
+parallelism
+women
+plants
+surfaces
+present paper
+authors
+ra
+result
+computer networks
+computational thinking
+(ct
+computer systems
+educators
+researchers
+gpus
+mobile devices
+variations
+simulations
+significant role
+(se
+software development
+society
+sdn
+embedded systems
+social media
+retrieval
+era
+programming
+scalability
+large volumes
+world
+life
+computing
+vulnerabilities
+engineers
+important role
+authentication
+augmented reality
+software architecture
+services
+web services
+novel approach
+automatic detection
+challenging task
+usage
+pattern recognition
+date
+artificial intelligence
+industry
+reliability
+people
+background
+feature extraction
+diagnosis
+objective
+objectives
+data mining
+micrornas
+(mirnas
+gene expression
+mirnas
+energy efficiency
+present study
+cell
+adoption
+treatment
+mechanism
+change
+classes
+infrastructure
+visualization
+construction
+execution time
+rise
+task
+disease
+end
+proliferation
+utilization
+sequence
+online social networks
+selection
+reduction
+cost
+computers
+automation
+limitations
+progression
+point
+great importance
+years
+differences
+behaviors
+modelling
+benefits
+lot
+big data
+data analysis
+business
+modeling
+aspects
+availability
+transformation
+extension
+schemes
+investigation
+mathematics
+rights
+darboux transformation
+variability
+education
+critical role
+gap
+shape
+way
+important task
+degree
+cells
+last decade
+opportunities
+challenges
+effect
+numerous applications
+ga
+difficulties
+cloud
+demand
+virtualization
+network traffic
+capability
+organization
+space
+workflows
+operation
+type
+social networks
+platforms
+edges
+contribution
+developers
+information security
+elliptic curve cryptography
+survey
+abstraction
+previous work
+mapreduce
+fact
+advent
+courses
+learning process
+universities
+issues
+programs
+challenge
+games
+engineering
+teaching
+skills
+increase
+strategy
+existing methods
+contents
+important issue
+overview
+modern operating systems
+requirements
+evolution
+defects
+optimization problem
+software product lines
+products
+companies
+verification
+key
+energy consumption
+patterns
+intrusion detection
+data storage
+relations
+operations
+sql
+sequences
+genetic algorithm
+children
+recent advances
+agents
+scene
+vehicles
+graphics processing unit
+gpu
+regions
+thousands
+network attacks
+propagation
+principles
+tracking
+measurement
+ecc
+relational database
+interface
+experience
+functionality
+feature
+cases
+consideration
+purposes
+correctness
+formation
+players
+student
+graphics processing units
+important roles
+hadoop
+extraction
+stability
+activity
+management
+deployment
+question
+main purpose
+integration
+possibilities
+safety
+proposal
+traditional methods
+parallel
+previous works
+parallel computing
+software development process
+past decade
+machine learning techniques
+billions
+videos
+level
+recent studies
+intrusion detection system
+ids
+machine learning algorithms
+protocol
+attack
+collection
+maple
+equations
+instances
+ways
+wireless networks
+novel method
+virtual reality
+events
+semantics
+sets
+power systems
+sip
+cpu

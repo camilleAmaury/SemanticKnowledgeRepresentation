@@ -1,0 +1,205 @@
+order
+study
+effects
+addition
+popularity
+large amounts
+data
+combination
+year
+creation
+rapid development
+computer technology
+computer graphics
+paper
+important problem
+computer vision
+number
+applications
+field
+wide range
+method
+fields
+growth
+humans
+evaluation
+literature
+period
+design
+high performance
+advantages
+relationship
+set
+line
+algorithms
+systems
+security
+system
+scheme
+image processing
+complexity
+decisions
+discovery
+use
+algorithm design
+algorithm
+impact
+relation
+elements
+data structures
+quality
+machine learning
+relational databases
+i.e
+organizations
+software
+malicious activities
+internet
+sensors
+goal
+database
+computer
+program
+queries
+information
+values
+object
+means
+article
+framework
+series
+efficiency
+(c
+distributed denial
+time
+network security
+family
+class
+conjunction
+implementation
+interactions
+kind
+letter
+lax pair
+studies
+improvement
+interaction
+context
+performance
+real time
+effectiveness
+accuracy
+estimation
+noise
+procedure
+parameters
+uncertainty
+storage
+work
+flow
+same time
+classification
+present work
+symbolic computation
+research
+large number
+distribution
+development
+state
+knowledge
+diseases
+review
+content
+majority
+user
+importance
+application
+purpose
+computation
+methodology
+artificial neural networks
+power
+input
+web
+science
+tool
+functions
+technique
+issue
+model
+dimensions
+simulation
+account
+uncertainties
+models
+errors
+characterization
+computer science
+size
+emergence
+conditions
+optimization
+training
+results
+new approach
+structure
+steps
+last few years
+approach
+devices
+new method
+proposed method
+advantage
+help
+identification
+detection
+surface
+solution
+dynamics
+notion
+distributed computing
+users
+contrast
+methods
+analysis
+access
+ontologies
+flexibility
+process
+focus
+reuse
+respect
+components
+groups
+organisms
+materials
+resolution
+domains
+approximation
+nature
+resources
+activities
+mobile device
+students
+production
+case
+tasks
+validation
+hardware
+potential
+software engineering
+behavior
+range
+concept
+problem
+variety
+computer vision applications
+presence
+experiments
+motion
+images
+volume
+particles
+example
+possibility
+source
