@@ -1,7 +1,7 @@
 import os
 from common_functions import *
 from collections import defaultdict
-
+import pandas as pd
 
 MIN_FREQ = 5 #frequency used to filter contexts
 
@@ -12,14 +12,17 @@ def main():
     """
     processed_corpus_dir = r".\OutputDir"
     freq_file = r".\OutputDir\freqTerms.txt"
-    terms_file = r".\OutputDir\ExtractedTerms.txt"
+    terms_file = r".\OutputDir\goldsorted.csv"
+    # terms_file = r".\OutputDir\ExtractedTerms.txt"
     window_size = 5
 
     # Load the frequent words file
     with open(freq_file) as f_in:
         freq_words = set([line.strip() for line in f_in])
-    with open(terms_file) as f_in2:
-        terms = set([line.strip() for line in f_in2])
+    # with open(terms_file) as f_in2:
+    #     terms = set([line.strip() for line in f_in2])
+    terms = set(pd.read_csv(terms_file)["Term"])
+    
 
     cooc_mat = defaultdict(lambda: defaultdict(int))
 

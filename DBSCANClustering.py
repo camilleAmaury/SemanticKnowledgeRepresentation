@@ -10,7 +10,7 @@ def main():
     #data shuffling
     # np.random.shuffle(X)
     #apply k-means
-    db = DBSCAN(eps=7, min_samples=2)
+    db = DBSCAN(eps=20, min_samples=2)
     dbscan = db.fit_predict(X)
     print(dbscan)
     plt.figure()
