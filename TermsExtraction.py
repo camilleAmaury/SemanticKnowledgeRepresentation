@@ -6,6 +6,7 @@ nlp = spacy.load('en_core_web_sm')
 from spacy.lang.en.stop_words import STOP_WORDS
 stopWords = set(STOP_WORDS)
 stopWords.add("e.g")
+stopWords.add("i.e")
 
 def main():
     """
