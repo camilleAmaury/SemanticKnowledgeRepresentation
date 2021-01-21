@@ -4,7 +4,7 @@ from collections import defaultdict
 import pandas as pd
 
 
-MIN_FREQ = 20
+MIN_FREQ = 15
 
 def main():
     """

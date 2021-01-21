@@ -1,0 +1,180 @@
+accuracy
+classification
+identification
+order
+addition
+images
+data
+source
+learning
+distribution
+combination
+model
+database
+visualization
+image
+estimation
+application
+range
+networks
+design
+performance
+set
+line
+class
+security
+machine learning algorithms
+size
+time
+real time
+surface
+elements
+data structures
+training
+subset
+databases
+detection
+motion
+internet
+information
+malicious activities
+object
+means
+values
+queries
+simulation
+operating systems
+framework
+efficiency
+series
+optimization
+conjunction
+device
+sequence
+lax pair
+interaction
+conditions
+knowledge
+effectiveness
+noise
+parameters
+uncertainty
+recognition
+resolution
+communication
+computation
+input
+mapreduce
+user
+prediction
+scalability
+artificial neural networks
+functions
+web
+features
+dimensions
+errors
+view
+encryption
+cloud
+contrast
+software development
+components
+focus
+ontologies
+hardware
+volume
+parallel computing
+proteins
+approximation
+relational database
+project
+programming
+computer programming
+validation
+automation
+big data
+behavior
+computer vision applications
+wireless networks
+network attacks
+code
+cell
+genes
+software systems
+nodes
+wireless sensor
+wireless sensor network
+patterns
+programs
+wsn
+cancer
+cloud computing
+crucial role
+understanding
+disease
+practical applications
+objects
+learners
+teachers
+artificial intelligence
+nosql
+sql
+cryptography
+boolean functions
+classes
+large datasets
+parallelism
+progress
+wsns
+semantic
+smartphones
+visual cryptography
+computational thinking
+sequences
+tsp
+hadoop
+optimization problem
+pattern recognition
+gpus
+social networks
+mobile devices
+sdn
+embedded systems
+software architecture
+augmented reality
+feature extraction
+data mining
+gene expression
+energy efficiency
+bacteria
+execution time
+online social networks
+computers
+data analysis
+information security
+distributed denial
+darboux transformation
+workflow
+virtualization
+network traffic
+cpu
+developers
+elliptic curve cryptography
+abstraction
+learning process
+modern operating systems
+software product lines
+gpu
+energy consumption
+intrusion detection
+data storage
+genetic algorithm
+graphics processing unit
+automatic detection
+graphics processing units
+virtual reality
+machine learning techniques
+intrusion detection system
+software development process
+computer networks

@@ -1,99 +1,178 @@
 import numpy as np
-from sklearn.metrics import accuracy_score
 import pandas as pd
+from DimensionReduction import *
+from ConvertSubConceptToCore import *
+from Models import Decision_Tree
 
 def main():
-    #load the data and labels
-        #load the data and labels
-    X = np.loadtxt(".\OutputDir\sub_verb_matrix.csv", delimiter=",", dtype=float)
-    print(X)
-    
-    from collections import defaultdict
-    temp = set()
-    with open(".\OutputDir\sub_verb_matrix_terms.txt", "r") as f:
-        for line in f:
-            temp.add(line.replace("\n", ""))
-    terms_labeled = pd.read_csv(".\OutputDir\goldsorted.csv", sep=",", header=0)["Term"]
-    indices = list(range(terms_labeled.shape[0]))
-    df = set(terms_labeled)
-    
-    to_keep = []
-    for i,w in enumerate(df):
-        if w in temp:
-            to_keep.append(i)
-    indices = to_keep
-    
-    Y = pd.read_csv(".\OutputDir\goldsorted.csv", sep=",", header=0).values[indices, 1:]
-    
-    terms_labeled = pd.read_csv(".\OutputDir\goldsorted.csv", sep=",", header=0).values[indices,2]
-    #print(len(set(terms_labeled)))
+    # files
+    window_matrix_file = ".\OutputDir\window_matrix.csv"
+    window_terms_file = ".\OutputDir\window_matrix_terms.txt"
+    sub_verb_matrix_file = ".\OutputDir\sub_verb_matrix.csv"
+    subverb_terms_file = ".\OutputDir\sub_verb_matrix_terms.txt"
+    abstract_concepts_file = ".\csv_docs\TP_CS_CoreConceptIn2Level.csv"
+    ontology_file = ".\OutputDir\goldsorted.csv"
     
     
-    # plot of repartition
-    dico = defaultdict(int)
-    for label in terms_labeled:
-        dico[label] += 1
+    print("===================================================")
+    print("======= Decision Tree On sub-core concepts ========")
+    print("===================================================")
     
-    threshold = 5
-    indices = []
-    classes = []
-    for k in dico:
-        if dico[k] >= threshold:
-            classes.append(k)
-    for i in range(Y.shape[0]):
-        if Y[i,1] in classes:
-            indices.append(i)
-    Y = Y[indices, :]
-    dic_new_label = {}
-    for i, oldlabel in enumerate(classes):
-        dic_new_label[oldlabel] = i
-        
-    for i in range(Y.shape[0]):
-        Y[i,1] = dic_new_label[Y[i,1]]
-        
-    X = X[indices, :]
-
-    #split the data between training and testing
-    from sklearn.model_selection import train_test_split
-    from sklearn.decomposition import PCA
-    import matplotlib.pyplot as plt
+    print(
+        """
+            ===================================
+            ========= sub_verb_matrix =========
+            ===================================
+        """
+    )
     
-    pca = PCA(n_components=20)
-    pca.fit(X)
-    # plt.plot(pca.explained_variance_ratio_)
-    # plt.xticks(range(len(pca.explained_variance_ratio_)))
+    # load the data
+    X = np.loadtxt(sub_verb_matrix_file, delimiter=",", dtype=float)
+    Y = eliminate_non_existing_terms(subverb_terms_file, ontology_file)
     
-    pca = PCA(n_components=4)
-    X = pca.fit_transform(X)
+    # compute frequency of classes in order to reduce complexity of classification
+    frequency = repartition(Y, ploting=True)
     
-    from sklearn.model_selection import KFold
-    from sklearn.model_selection import cross_val_score
-    cv = KFold(n_splits=10, random_state=1, shuffle=True)
+    # reduce dataset
+    X, Y, old_labels = eliminate_non_frequent_class(X, Y, frequency, 3)
     
-    # data_train, data_test, labels_train, labels_test, couples_train, couples_test = train_test_split(X, Y[:, 1].astype(int), Y[:, 0], test_size=0.20)
-    # print(couples_test)
-
-
-    #build the Knn model
-    from sklearn.tree import DecisionTreeClassifier
-    dtree = DecisionTreeClassifier()
-    # dtree.fit(data_train, labels_train)
+    # Compute Matrix Sparcity
+    Sparsity(X, "sub_verb_matrix", "sub_verb_matrix Sparcity")
     
-    scores = cross_val_score(dtree, X, Y[:,1].astype(int), scoring='accuracy', cv=cv, n_jobs=-1)
-    print(np.mean(scores),scores)
-
-    # #predict for the testing data
-    # y = dtree.predict(data_test)
-    # #pring the results
-    # print ("accuracy:")
-    # print (accuracy_score(labels_test, y))
-    # i = 0
-    # for couple in couples_test:
-    #     if int(y[i]) - int(labels_test[i]) == 0:
-    #         print(couple + ", " + str(labels_test[i]) + ", " + str(y[i]))
-    #     else:
-    #         print(couple + ", " + str(labels_test[i]) + ", " + str(y[i]))
-        # i += 1
+    # Compute PCA
+    X_pca = PCA_reduction(X, keep_n_component=3, n_print=20)
+    # Compute T-SNE
+    X_tsne = TSNE_reduction(X, keep_n_component=3)
+    
+    # Compute Decision Tree
+    gs_dtree_pca = Decision_Tree(X_pca, Y, kfold=5)
+    gs_dtree_tsne = Decision_Tree(X_tsne, Y, kfold=5)
+    
+    print("    > With PCA reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_pca.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_pca.best_score_))
+    print("    > With T-SNE reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_tsne.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_tsne.best_score_))
+    
+    print(
+        """
+            ===================================
+            ========= window_matrix =========
+            ===================================
+        """
+    )
+    
+    # load the data
+    X = np.loadtxt(window_matrix_file, delimiter=",", dtype=float)
+    Y = eliminate_non_existing_terms(window_terms_file, ontology_file)
+    
+    # compute frequency of classes in order to reduce complexity of classification
+    frequency = repartition(Y, ploting=True)
+    
+    # reduce dataset
+    X, Y, old_labels = eliminate_non_frequent_class(X, Y, frequency, 3)
+    
+    # Compute Matrix Sparcity
+    Sparsity(X, "window_matrix", "window_matrix Sparcity")
+    
+    # Compute PCA
+    X_pca = PCA_reduction(X, keep_n_component=5, n_print=20)
+    # Compute T-SNE
+    X_tsne = TSNE_reduction(X, keep_n_component=2)
+    
+    # Compute Decision Tree
+    gs_dtree_pca = Decision_Tree(X_pca, Y, kfold=5)
+    gs_dtree_tsne = Decision_Tree(X_tsne, Y, kfold=5)
+    
+    print("    > With PCA reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_pca.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_pca.best_score_))
+    print("    > With T-SNE reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_tsne.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_tsne.best_score_))
+    
+    
+    print("===================================================")
+    print("========= Decision Tree On core concepts ==========")
+    print("===================================================")
+    
+    print(
+        """
+            ===================================
+            ========= sub_verb_matrix =========
+            ===================================
+        """
+    )
+    
+    
+    # load the data
+    X = np.loadtxt(sub_verb_matrix_file, delimiter=",", dtype=float)
+    Y = eliminate_non_existing_terms(subverb_terms_file, ontology_file)
+    Y, core_concepts = convert_sub_concepts_to_core(Y, abstract_concepts_file)
+    
+    # compute frequency of classes in order to reduce complexity of classification
+    frequency = repartition(Y, ploting=True)
+    
+    # reduce dataset
+    X, Y, old_labels = eliminate_non_frequent_class(X, Y, frequency, 3)
+    
+    # Compute Matrix Sparcity
+    Sparsity(X, "sub_verb_matrix", "sub_verb_matrix Sparcity")
+    
+    # Compute PCA
+    X_pca = PCA_reduction(X, keep_n_component=3, n_print=20)
+    # Compute T-SNE
+    X_tsne = TSNE_reduction(X, keep_n_component=3)
+    
+    # Compute Decision Tree
+    gs_dtree_pca = Decision_Tree(X_pca, Y, kfold=5)
+    gs_dtree_tsne = Decision_Tree(X_tsne, Y, kfold=5)
+    
+    print("    > With PCA reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_pca.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_pca.best_score_))
+    print("    > With T-SNE reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_tsne.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_tsne.best_score_))
+    
+    print(
+        """
+            ===================================
+            ========= window_matrix =========
+            ===================================
+        """
+    )
+    
+    # load the data
+    X = np.loadtxt(window_matrix_file, delimiter=",", dtype=float)
+    Y = eliminate_non_existing_terms(window_terms_file, ontology_file)
+    Y, core_concepts = convert_sub_concepts_to_core(Y, abstract_concepts_file)
+    
+    # compute frequency of classes in order to reduce complexity of classification
+    frequency = repartition(Y, ploting=True)
+    
+    # reduce dataset
+    X, Y, old_labels = eliminate_non_frequent_class(X, Y, frequency, 3)
+    
+    # Compute Matrix Sparcity
+    Sparsity(X, "window_matrix", "window_matrix Sparcity")
+    
+    # Compute PCA
+    X_pca = PCA_reduction(X, keep_n_component=5, n_print=20)
+    # Compute T-SNE
+    X_tsne = TSNE_reduction(X, keep_n_component=2)
+    
+    # Compute Decision Tree
+    gs_dtree_pca = Decision_Tree(X_pca, Y, kfold=5)
+    gs_dtree_tsne = Decision_Tree(X_tsne, Y, kfold=5)
+    
+    print("    > With PCA reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_pca.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_pca.best_score_))
+    print("    > With T-SNE reduction :")
+    print("       > Best estimator : \n{}".format(gs_dtree_tsne.best_estimator_))
+    print("       > Accuracy : {}".format(gs_dtree_tsne.best_score_))
 
 
 if __name__ == '__main__':
