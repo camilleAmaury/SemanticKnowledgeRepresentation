@@ -38,6 +38,7 @@ def main():
     
     # Compute Matrix Sparcity
     Sparsity(X, "sub_verb_matrix", "sub_verb_matrix Sparcity")
+    print("   > Number of individual after pre-processing : {}".format(X.shape[0]))
     
     # Compute PCA
     X_pca = PCA_reduction(X, keep_n_component=3, n_print=20)
@@ -75,6 +76,7 @@ def main():
     
     # Compute Matrix Sparcity
     Sparsity(X, "window_matrix", "window_matrix Sparcity")
+    print("   > Number of individual after pre-processing : {}".format(X.shape[0]))
     
     # Compute PCA
     X_pca = PCA_reduction(X, keep_n_component=5, n_print=20)
@@ -119,6 +121,7 @@ def main():
     
     # Compute Matrix Sparcity
     Sparsity(X, "sub_verb_matrix", "sub_verb_matrix Sparcity")
+    print("   > Number of individual after pre-processing : {}".format(X.shape[0]))
     
     # Compute PCA
     X_pca = PCA_reduction(X, keep_n_component=3, n_print=20)
@@ -157,6 +160,7 @@ def main():
     
     # Compute Matrix Sparcity
     Sparsity(X, "window_matrix", "window_matrix Sparcity")
+    print("   > Number of individual after pre-processing : {}".format(X.shape[0]))
     
     # Compute PCA
     X_pca = PCA_reduction(X, keep_n_component=5, n_print=20)
